@@ -25,9 +25,8 @@
    }else{
     alert (`you selected 5 players`)
    }
-
-
  }
+
 
 
 
@@ -42,10 +41,10 @@ function  display(player){
 
  
  
-///Total amount
 
+///amount
 document.getElementById(`playerRateCalculate`).addEventListener(`click`,function(){
-
+    //Per player expence 
    const playersCounter = players.length;
    
 
@@ -56,7 +55,7 @@ document.getElementById(`playerRateCalculate`).addEventListener(`click`,function
     const perPlayerTotalAmount = playerRate * playersCounter;
 
 
-    // per-expeence
+    // per player expence set total pleyer Expence
     const perExpence = document.getElementById(`per-expence`);
     const perExpenceString = perExpence.innerText;
     const perExpenceAmount = parseInt(perExpenceString);
@@ -68,6 +67,7 @@ document.getElementById(`playerRateCalculate`).addEventListener(`click`,function
 
  
 
+//Final total amount :
   document.getElementById(`calculateTotal`).addEventListener(`click`,function(){
 
     const perExpence = document.getElementById(`per-expence`);
@@ -86,9 +86,6 @@ document.getElementById(`playerRateCalculate`).addEventListener(`click`,function
     const totalBlance = parseInt(totalCoast);
 
      finalTotalAmount.innerText = totalAmount;
-    
-
- 
     })
 
 
