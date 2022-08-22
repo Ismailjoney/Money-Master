@@ -13,7 +13,7 @@
   tbody.appendChild(tr);
   tr.innerHTML =
   `  
-  <th> ${i + 1}</th>
+  <th> ${i+1}</th>
   <td>${everyPlayers[i]}</td>
   `;
 

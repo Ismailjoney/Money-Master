@@ -117,8 +117,8 @@
 
                   <!-- side column -->
                   <div class="col-4"> 
-                    <div>
-                        <h4>Select</h4>
+                    <div style="height:200px;">
+                        <h4 style="font-weight: bold;">Select - V</h4>
                          <table>
                             <tbody id="select-player-list" >
                              
@@ -129,24 +129,28 @@
 
                     <!-- buddget section -->
                     <div> 
-                        <h2>Budget</h2>
+                        <h2 style="font-weight: bold;">BudGet</h2>
 
-                        <p class="fw-bold mt-2">Per Player :</p>
-                        <input id="per-player" class="w-100 mb-2"  type="number" name=""  >
-                        <button id="playerRateCalculate" type="button" class="btn btn-primary  ">
+                         
+                        <span class="fw-bold mt-2">Per Player :</span>
+                        <input id="per-player" class="mb-2"  type="number" name=""  > 
+
+                        <button id="playerRateCalculate" type="button" class="btn btn-primary  w-75">
                             Calculate
                         </button>
 
-                        <p class="fw-bold mt-2">Player expence: <span id="per-expence"></span>   $</p>
-                        <p class="fw-bold">Maneger :</p>
-                        <input id="manegerAmount" class="w-100 mb-2" type="number" name="" >
+                        <p class="fw-bold mt-2">PLAYER EXPENCE : $  <span id="per-expence"></span>   </p>
+                        
+                        <span class="fw-bold">Maneger :</span>
+                        <input id="manegerAmount" class="mb-2" type="number" name="" >
+                        <br>
 
-                        input:
+                        
+                        <span class="fw-bold mt-2 ps-1">Coach : </span> 
+                        <input id="coachAmount" class="mb-2 ms-4" type="number" name="" >
 
-                        <p class="fw-bold mt-2">Coach :</p>
-                        <input id="coachAmount" class="w-100 mb-2" type="number" name="" >
-                        <button id="calculateTotal" type="button" class="btn btn-primary">Calculate Total</button>
-                        <p class="fw-bold mt-2 w-100">Total: <span id ="total"></span>   $</p>  
+                        <button id="calculateTotal" type="button" class="btn btn-primary w-75">Calculate Total</button>
+                        <p class="fw-bold mt-2 w-100">TOTAL: $  <span id ="total"></span>   </p>  
                     </div>
                   </div>
                 </div>
