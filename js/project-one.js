@@ -1,24 +1,32 @@
  const  players =[];
 
  function setPlayersInList(everyPlayers){
-const tbody = document.getElementById("select-player-list");
+  const tbody = document.getElementById("select-player-list");
 
-tbody.innerHTML="";
+  tbody.innerHTML="";
 
+  
+//here we add player in player List :
   for(i = 0 ; i < everyPlayers.length; i++){
-    // console.log(everyPlayers[i]);
-
-    const tr = document.createElement(`tr`)
-    tr.innerHTML =
-    `  
-    <th> ${i + 1 }</th>
-    <td>${everyPlayers[i]}</td>
-    `;
-
-    tbody.appendChild(tr);
-
  
+  const tr = document.createElement(`tr`)
+  tbody.appendChild(tr);
+  tr.innerHTML =
+  `  
+  <th> ${i + 1}</th>
+  <td>${everyPlayers[i]}</td>
+  `;
+
   }
+
+  //here we selected maximaum 5 players 
+  if(everyPlayers.length <= 5 ){
+    return everyPlayers;
+   }else{
+    alert (`you selected 5 players`)
+   }
+
+
  }
 
 
@@ -32,40 +40,27 @@ function  display(player){
  
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
-///////////////////////////////////////////////////
+ 
+///Total amount
 
 document.getElementById(`playerRateCalculate`).addEventListener(`click`,function(){
+
+   const playersCounter = players.length;
+   
+
     const player = document.getElementById(`per-player`);
     const playerRate =player.value;
+    player.value="";
 
-    const perPlayerTotalAmount = playerRate * 5;
+    const perPlayerTotalAmount = playerRate * playersCounter;
 
 
     // per-expeence
     const perExpence = document.getElementById(`per-expence`);
     const perExpenceString = perExpence.innerText;
     const perExpenceAmount = parseInt(perExpenceString);
-
+    
     perExpence.innerText = perPlayerTotalAmount;
 
   })
@@ -82,13 +77,16 @@ document.getElementById(`playerRateCalculate`).addEventListener(`click`,function
     const manegerAmount =  manegerAndCoachamount(`manegerAmount`);
     const coachAmount = manegerAndCoachamount(`coachAmount`)
 
+
+    
     let totalAmount = manegerAmount + coachAmount + perExpenceAmount;
 
     const finalTotalAmount= document.getElementById(`total`);
     const totalCoast = finalTotalAmount.innerText ;
     const totalBlance = parseInt(totalCoast);
 
-    console.log(finalTotalAmount.innerText = totalAmount) ;
+     finalTotalAmount.innerText = totalAmount;
+    
 
  
     })
