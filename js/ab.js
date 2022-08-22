@@ -1,7 +1,0 @@
-
-
-
-
-
-
- //onclick = "display(this)"

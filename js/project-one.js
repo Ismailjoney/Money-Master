@@ -1,41 +1,55 @@
-// display("btn-1","playerName-1");
+ const  players =[];
 
-// display("btn-2","playerName-2");
-// display("btn-3","playerName-3");
-// display("btn-4","playerName-4");
-// display("btn-5","playerName-5");
-// display("btn-6","playerName-6");
+ function setPlayersInList(everyPlayers){
+const tbody = document.getElementById("select-player-list");
+
+tbody.innerHTML="";
+
+  for(i = 0 ; i < everyPlayers.length; i++){
+    // console.log(everyPlayers[i]);
+
+    const tr = document.createElement(`tr`)
+    tr.innerHTML =
+    `  
+    <th> ${i + 1 }</th>
+    <td>${everyPlayers[i]}</td>
+    `;
+
+    tbody.appendChild(tr);
+
  
-const  emptyArray = [];
- 
-
-function setPlayerList(reciveUpdateArray){
-
-  const selectPlayer = document.getElementById(`select-player-list`);
-  selectPlayer.innerHTML="";
+  }
+ }
 
 
-for(let i = 1; i < reciveUpdateArray.length; i++){
-  
-  const al = reciveUpdateArray[i];
- 
-  const li = document.createElement(`li`);
-  li.innerHTML = `<li>${al}</li>`;
- 
-  
-  selectPlayer.appendChild(li);
 
-
-}
-}
- 
- function  display(player){
+function  display(player){
   
   const playerName = player.parentNode.parentNode.children[0].innerText;
-  emptyArray.push(playerName);
-  setPlayerList(emptyArray)
+  players.push(playerName);
+
+  setPlayersInList(players);
  
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 ///////////////////////////////////////////////////
@@ -95,5 +109,3 @@ document.getElementById(`playerRateCalculate`).addEventListener(`click`,function
 
 
 
-
- 
