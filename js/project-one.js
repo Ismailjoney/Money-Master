@@ -4,37 +4,39 @@
   //target  player body:
   const tbody = document.getElementById("select-player-list");
   tbody.innerHTML="";
-
- //here we selected maximaum 5 players 
-  if(players.length <= 5){
-
-    for(i = 0 ; i <  element.length; i++){
  
+    for(i = 0 ; i <  element.length; i++){
+
       const tr = document.createElement(`tr`);
-      tbody.appendChild(tr);
       tr.innerHTML =
+
       `  
-      <th> ${i+1}</th>
-      <td>${ element[i]}</td>
-      `;
+      <th> ${i + 1}</th>
+      <td>${ element[i]}</td>`
+
+      tbody.appendChild(tr);
+    }
+
+   
+     if(players.length <=  5){
+      return players;
       
-      }
-      player.push(element);
-  } 
-  else{
-     alert(`You all ready added 5 players. You can not add more`)
-  };
+     }else{
+       alert(` allready you selected five players`)
+     
+    }
 
- }
-
-
-
+ 
+ 
+  }
+  
+  
 //player
 function  display(elements){
   
    
   const playerName =  elements.parentNode.parentNode.children[0].innerText;
-
+ 
  
   players.push(playerName);
 
